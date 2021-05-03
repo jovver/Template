@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>Add Person</title>
+    <style>
+        table, th, td {
+            border:1px solid black;
+            padding: 5px;
+        }
+
+        .left-container > .form-container {
+            margin: 5%;
+            padding: 1%;
+        }
+
+        .right-container > .persons-table-container {
+            margin: 2%;
+            padding: 1%;
+        }
+
+        .left-container > .form-container > input {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .btn-warning {
+            float: right;
+        }
+
+        .persons-table {
+            width: 100%;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body onload="onLoadDefaults()">
+    <div class="main-container" style="padding:20px; font-size:small">
+        <h1>Add Person</h1>
+        <div class="row">
+            <div class="left-container col-5">
+                <div class="form-container">     
+                    <input type="text" class="input-firstName form-control" id="inputFirstName" placeholder="First name"/>
+                    <input type="text" class="input-lastName form-control" id="inputLastName" placeholder="Last name"/>
+                    <input type="text" class="input-gender form-control" id="inputGender" placeholder="Gender"/>
+                    <input type="text" class="input-age form-control" id="inputAge" placeholder="Age"/>
+            
+                    <button type="submit" onclick="onAddPerson()" class="btn btn-primary btn-sm">Save</button>
+                    <button type="submit" onclick="onCancel()" class="btn btn-warning btn-sm">Cancel</button>
+                </div>
+            </div>
+            <div class="right-container col-7">
+                <div class="persons-table-container">     
+                    <table class="persons-table">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Gender</th>
+                                <th>Age</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="add-person.js"></script>
+</body>
+</html>
+<html>
